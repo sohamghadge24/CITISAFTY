@@ -1,0 +1,6 @@
+Processing Stage,Average Latency per Image (ms),Proportion (%)
+Image Preprocessing,3.5,9.5
+Feature Extraction (ResNet-50),12.8,34.8
+Incident Detection Classification,2.1,5.7
+NLP Severity Analysis Pipeline,18.4,50.0
+Total Pipeline Latency,36.8,100.0

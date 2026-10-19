@@ -1,0 +1,6 @@
+Severity Class,Accuracy (%),Precision (%),Recall (%),F1-Score (%),Sample Count (Claimed)
+No Incident,96.5,95.0,96.5,95.7,4680
+Low Severity,92.1,91.8,89.3,90.5,3300
+Medium Severity,91.4,91.1,91.4,91.2,2930
+High Severity,95.8,93.8,94.1,93.9,1955
+Average (Macro),93.95,92.9,92.8,92.8,12865

@@ -1,0 +1,4 @@
+Model Checkpoint,Architecture,Classes,Accuracy (%),Macro Precision (%),Macro Recall (%),Macro F1 (%)
+backend/best_model_accident.pth,EfficientNet-B0,"3 (Low, Med, High)",39.11,36.7,39.11,35.18
+backend/ml_pipeline/best_model_accident.pth,EfficientNet-B0,"3 (Low, Med, High)",35.56,32.52,35.56,29.65
+best_model_accident.pth (root),ResNet-18,"3 (Low, Med, High)",65.33,65.24,65.33,65.26

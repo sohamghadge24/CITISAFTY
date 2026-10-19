@@ -1,0 +1,5 @@
+Actual \ Predicted,Low (Predicted),Medium (Predicted),High (Predicted),Row Total (Actual)
+Low (Actual),47,18,10,75
+Medium (Actual),16,45,14,75
+High (Actual),9,11,55,75
+Column Total (Predicted),72,74,79,225

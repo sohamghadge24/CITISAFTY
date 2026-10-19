@@ -1,0 +1,6 @@
+Actual \ Predicted,No Incident,Low Severity,Medium Severity,High Severity,Row Total (Actual)
+No Incident,4520,120,35,5,4680
+Low Severity,185,2950,145,20,3300
+Medium Severity,40,115,2680,95,2930
+High Severity,10,25,80,1840,1955
+Column Total (Predicted),4755,3210,2940,1960,12865

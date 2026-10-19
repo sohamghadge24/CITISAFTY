@@ -1,0 +1,5 @@
+Actual \ Predicted (ResNet-50 4-Class),0: Low,1: Medium,2: High,3: Critical,Row Total
+Low (minor),42,22,0,11,75
+Medium (moderate),17,40,0,18,75
+High (major),2,14,0,59,75
+Column Total (Predicted),61,76,0,88,225

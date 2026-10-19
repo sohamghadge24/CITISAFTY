@@ -1,0 +1,12 @@
+{
+  "os": "macOS-26.6.2-arm64-arm-64bit",
+  "system": "Darwin",
+  "release": "25.6.0",
+  "machine": "arm64",
+  "python_version": "3.11.14 (main, Oct  9 2025, 16:16:55) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "torch_version": "2.10.0",
+  "torchvision_version": "0.25.0",
+  "cuda_available": false,
+  "mps_available": true,
+  "cpu_count": 8
+}

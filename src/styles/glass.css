@@ -1,0 +1,92 @@
+:root {
+    --glass-bg-dark: rgba(20, 20, 25, 0.6);
+    --glass-bg-light: rgba(255, 255, 255, 0.6);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
+    --glass-border-light: rgba(0, 0, 0, 0.05);
+    --glass-blur: 16px;
+    --accent-primary: #3b82f6;
+    --accent-secondary: #6366f1;
+    --text-primary-dark: #f8fafc;
+    --text-secondary-dark: #94a3b8;
+    --text-primary-light: #1e293b;
+    --text-secondary-light: #64748b;
+}
+
+.app-theme-dark {
+    --bg-panel: var(--glass-bg-dark);
+    --border-panel: var(--glass-border-dark);
+    --text-main: var(--text-primary-dark);
+    --text-dim: var(--text-secondary-dark);
+}
+
+.app-theme-light {
+    --bg-panel: var(--glass-bg-light);
+    --border-panel: var(--glass-border-light);
+    --text-main: var(--text-primary-light);
+    --text-dim: var(--text-secondary-light);
+}
+
+.glass-panel {
+    background: var(--bg-panel);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--border-panel);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: var(--text-main);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.glass-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-panel);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.glass-input:focus {
+    border-color: var(--accent-primary);
+}
+
+.glass-button {
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.glass-button:hover {
+    transform: translateY(-2px);
+    background: var(--accent-secondary);
+}
+
+.glass-button:active {
+    transform: translateY(0);
+}
+
+.glass-button.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+}
+
+.glass-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

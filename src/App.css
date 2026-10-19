@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-color-glow: rgba(79, 70, 229, 0.4);
+  --secondary-color: #ef4444;
+  --secondary-color-glow: rgba(239, 68, 68, 0.4);
+  --warning-color: #f59e0b;
+  --warning-color-glow: rgba(245, 158, 11, 0.4);
+  --success-color: #10b981;
+  --success-color-glow: rgba(16, 185, 129, 0.4);
+  --bg-app: #0f172a;
+  --bg-panel: rgba(15, 23, 42, 0.65);
+  --border-panel: rgba(255, 255, 255, 0.1);
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --accent-glow: rgba(79, 70, 229, 0.5);
+}
+
+[data-theme='light'] {
+  --primary-color: #4f46e5;
+  --primary-color-glow: rgba(79, 70, 229, 0.2);
+  --secondary-color: #ef4444;
+  --secondary-color-glow: rgba(239, 68, 68, 0.2);
+  --warning-color: #f59e0b;
+  --warning-color-glow: rgba(245, 158, 11, 0.2);
+  --success-color: #10b981;
+  --success-color-glow: rgba(16, 185, 129, 0.2);
+  --bg-app: #f8fafc;
+  --bg-panel: rgba(255, 255, 255, 0.7);
+  --border-panel: rgba(0, 0, 0, 0.05);
+  --text-main: #0f172a;
+  --text-dim: #64748b;
+  --accent-glow: rgba(79, 70, 229, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  transition: background-color 0.3s ease;
+}
+
+/* 1. Base Layer: Fullscreen Map */
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+.app-shell {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 2. Map Container wrapper */
+.map-layout-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* 3. Content Interaction Layer */
+.content-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  /* Let clicks pass to map */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism System */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid var(--border-panel);
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+}
+
+.glass-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Scrollbar customization */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.motion-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+/* User Location Pulse */
+.current-pos-marker {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.4);
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.success { color: #22c55e; }
+.error { color: #ef4444; }

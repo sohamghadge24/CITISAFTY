@@ -1,0 +1,7 @@
+Class,Precision (%),Recall (%),F1-Score (%),Support (Test Count)
+Low (minor),65.28,62.67,63.95,75
+Medium (moderate),60.81,60.0,60.4,75
+High (major),69.62,73.33,71.43,75
+Overall Accuracy,65.33,65.33,65.33,225
+Macro Average,65.24,65.33,65.26,225
+Weighted Average,65.24,65.33,65.26,225

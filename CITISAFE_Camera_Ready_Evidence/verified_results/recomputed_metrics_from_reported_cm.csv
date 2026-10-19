@@ -1,0 +1,6 @@
+Severity Class,TP,FP,FN,TN,Reported Precision (%),Recomputed Precision (%),Reported Recall (%),Recomputed Recall (%),Reported F1 (%),Recomputed F1 (%),Reported Class Accuracy (%),Recomputed OvR Accuracy (%),Class Recall as Accuracy (%)
+No Incident,4520,235,160,7950,95.0,95.0578,96.5,96.5812,95.7,95.8135,96.5,96.9297,96.5812
+Low Severity,2950,260,350,9305,91.8,91.9003,89.3,89.3939,90.5,90.6298,92.1,95.2585,89.3939
+Medium Severity,2680,260,250,9675,91.1,91.1565,91.4,91.4676,91.2,91.3118,91.4,96.0358,91.4676
+High Severity,1840,120,115,10790,93.8,93.8776,94.1,94.1176,93.9,93.9974,95.8,98.1733,94.1176
+Summary (Macro / Overall),11990,875,875,37720,92.9,92.998,92.8,92.8901,92.8,92.9381,93.95,93.1986,92.8901
